@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Quizz App</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="container__start">
+        <span class="container__start__description"
+          >Welcome, are you ready to take the quiz?</span
+        >
+        <input type="submit" value="Start" data-name="start-quiz" />
+      </div>
+      <div class="container__questions">
+        <form action="submit" class="container__questions__form">
+          <div class="container__questions" data-name="question">
+            <h3>What does CSS stands for?</h3>
+          </div>
+          <div class="container__questions" data-name="answers">
+            <div class="container__questions__answer" data-name="answer">
+              <input type="radio" name="answer1" id="answer1" />
+              <span data-name="answer1">Computer Style Sheets</span>
+            </div>
+            <div class="container__questions__answer" data-name="answer">
+              <input type="radio" name="answer2" id="answer2" />
+              <span data-name="answer2">Cascading Style Sheets</span>
+            </div>
+            <div class="container__questions__answer" data-name="answer">
+              <input type="radio" name="answer3" id="answer3" />
+              <span data-name="answer3">Colorful Style Sheets</span>
+            </div>
+            <div class="container__questions__answer" data-name="answer">
+              <input type="radio" name="answer4" id="answer4" />
+              <span data-name="answer4">Creative Style Sheets</span>
+            </div>
+          </div>
+          <input type="submit" value="Next" />
+        </form>
+      </div>
+      <div class="container__finish">
+        <h3>Finished!</h3>
+        <div class="container__finish elapsed__time__container">
+          It took you <span data-name="elapsedTime">22 min</span> to finish this
+          quiz
+        </div>
+        <div class="container__finish correct__answers__container">
+          You answered correct to,
+          <span data-name="correctAnswers">5</span> questions.
+        </div>
+        <div data-name="quizStatus">Passed!</div>
+      </div>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
