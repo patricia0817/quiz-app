@@ -1,21 +1,36 @@
+body {
+  margin: 0;
+}
+
 .container {
   padding: 0;
-  background-color: white;
-  color: white;
   text-align: center;
 }
 
 .container__start {
-  background-color: black;
   text-align: center;
   padding: 20rem;
 }
 
 .container__start__description {
   display: block;
-  padding: 5rem 0;
+  padding: 3rem 0;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
 }
 
-.container__start[data-name='start-quiz'] {
-  padding: 5rem;
+[data-name='start-quiz'] {
+  padding: 0.5rem;
+  background-color: transparent;
+  border: 1px solid black;
+  opacity: 0.7;
+  transition: all 1s ease;
+  font-family: 'Roboto', sans-serif;
+  font-weight: lighter;
+}
+
+[data-name='start-quiz']:hover {
+  padding: 0.7rem;
+  opacity: 1;
+  font-weight: normal;
 }
