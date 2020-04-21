@@ -6,18 +6,22 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
     <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
 
     <title>Quizz App</title>
   </head>
   <body>
     <div class="container">
       <div class="container__start">
-        <span class="container__start__description"
-          >Welcome, are you ready to take the quiz?</span
-        >
+        <h2 class="container__start__description">
+          Welcome, are you ready to take the quiz?
+        </h2>
         <input type="submit" value="Start" data-name="start-quiz" />
       </div>
-      <div class="container__questions">
+      <div class="container__questions" hidden>
         <form action="submit" class="container__questions__form">
           <div class="container__questions" data-name="question">
             <h3>What does CSS stands for?</h3>
@@ -43,7 +47,7 @@
           <input type="submit" value="Next" />
         </form>
       </div>
-      <div class="container__finish">
+      <div class="container__finish" hidden>
         <h3>Finished!</h3>
         <div class="container__finish elapsed__time__container">
           It took you <span data-name="elapsedTime">22 min</span> to finish this
