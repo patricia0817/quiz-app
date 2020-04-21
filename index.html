@@ -15,36 +15,40 @@
   </head>
   <body>
     <div class="container">
-      <div class="container__start">
+      <div class="container__start" hidden>
         <h2 class="container__start__description">
           Welcome, are you ready to take the quiz?
         </h2>
         <input type="submit" value="Start" data-name="start-quiz" />
       </div>
-      <div class="container__questions" hidden>
+      <div class="container__questions">
         <form action="submit" class="container__questions__form">
-          <div class="container__questions" data-name="question">
+          <div class="container__questions__question" data-name="question">
             <h3>What does CSS stands for?</h3>
           </div>
-          <div class="container__questions" data-name="answers">
+          <div class="container__questions__answers" data-name="answers">
             <div class="container__questions__answer" data-name="answer">
-              <input type="radio" name="answer1" id="answer1" />
-              <span data-name="answer1">Computer Style Sheets</span>
+              <input type="radio" name="answer" id="answer1" />
+              <label for="answer1">Computer Style Sheets</label>
             </div>
             <div class="container__questions__answer" data-name="answer">
-              <input type="radio" name="answer2" id="answer2" />
-              <span data-name="answer2">Cascading Style Sheets</span>
+              <input type="radio" name="answer" id="answer2" />
+              <label for="answer2">Cascading Style Sheets</label>
             </div>
             <div class="container__questions__answer" data-name="answer">
-              <input type="radio" name="answer3" id="answer3" />
-              <span data-name="answer3">Colorful Style Sheets</span>
+              <input type="radio" name="answer" id="answer3" />
+              <label for="answer3">Colorful Style Sheets</label>
             </div>
             <div class="container__questions__answer" data-name="answer">
-              <input type="radio" name="answer4" id="answer4" />
-              <span data-name="answer4">Creative Style Sheets</span>
+              <input type="radio" name="answer" id="answer4" />
+              <label for="answer4">Creative Style Sheets</label>
             </div>
+            <input
+              class="container__questions__submit__form"
+              type="submit"
+              value="Next"
+            />
           </div>
-          <input type="submit" value="Next" />
         </form>
       </div>
       <div class="container__finish" hidden>
