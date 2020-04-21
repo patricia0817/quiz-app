@@ -1,0 +1,21 @@
+.container {
+  padding: 0;
+  background-color: white;
+  color: white;
+  text-align: center;
+}
+
+.container__start {
+  background-color: black;
+  text-align: center;
+  padding: 20rem;
+}
+
+.container__start__description {
+  display: block;
+  padding: 5rem 0;
+}
+
+.container__start[data-name='start-quiz'] {
+  padding: 5rem;
+}
