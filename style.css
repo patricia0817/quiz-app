@@ -26,11 +26,65 @@ body {
   opacity: 0.7;
   transition: all 1s ease;
   font-family: 'Roboto', sans-serif;
-  font-weight: lighter;
 }
 
 [data-name='start-quiz']:hover {
   padding: 0.7rem;
   opacity: 1;
-  font-weight: normal;
+}
+
+.container__questions {
+  text-align: center;
+  padding: 20rem;
+}
+
+.container__questions__form {
+  width: 400px;
+  margin: 0 auto;
+}
+
+.container__questions__question {
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  padding: 0.5rem;
+  background-color: black;
+  color: white;
+}
+
+.container__questions__answers {
+  font-family: 'Roboto', sans-serif;
+  text-align: left;
+  margin: 0 auto;
+}
+
+.container__questions__answers input[type='radio'] {
+  display: none;
+}
+
+.container__questions__submit__form {
+  padding: 0.5rem;
+  background-color: transparent;
+  border: 1px solid black;
+  margin-top: 1rem;
+  opacity: 0.5;
+  font-family: 'Roboto', sans-serif;
+  transition: all 1s ease;
+}
+
+.container__questions__submit__form:hover {
+  opacity: 1;
+  padding: 0.7rem;
+}
+
+.container__questions__answer {
+  margin: 0.5rem 0;
+  padding: 0.5rem 0;
+}
+.container__questions__answer label {
+  background-color: grey;
+  color: white;
+  /* opacity: 0.7; */
+  padding: 0.7rem 0.3rem;
+  display: inline-block;
+  width: 98%;
 }
