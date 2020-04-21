@@ -1,5 +1,6 @@
 body {
   margin: 0;
+  font-family: 'Roboto', sans-serif;
 }
 
 .container {
@@ -83,8 +84,40 @@ body {
 .container__questions__answer label {
   background-color: grey;
   color: white;
-  /* opacity: 0.7; */
   padding: 0.7rem 0.3rem;
   display: inline-block;
   width: 98%;
+}
+
+.container__finish {
+  text-align: center;
+  padding: 20rem;
+  width: 400px;
+  margin: 0 auto;
+}
+
+.container__finish h3 {
+  background-color: black;
+  color: white;
+  padding: 2rem;
+  margin: 0;
+}
+
+.elapsed__time__container,
+.correct__answers__container,
+[data-name='quizStatus'] {
+  padding: 1rem;
+  background-color: grey;
+  color: white;
+}
+
+[data-name='elapsedTime'],
+[data-name='correctAnswers'] {
+  color: black;
+  font-weight: bold;
+}
+
+[data-name='quizStatus'] {
+  color: #b94f2c;
+  font-weight: bold;
 }
