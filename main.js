@@ -23,24 +23,24 @@ let index = 0;
 let dataResponse;
 let interval;
 
+startButton.addEventListener('click', handleStartButton);
+nextQuestion.addEventListener('click', e => {
+  e.preventDefault();
+  handleNextQuestion();
+});
+answers.forEach(item => {
+  item.addEventListener('click', e => {
+    handleAnswer(dataResponse[index], e);
+  });
+});
+const url = `https://opentdb.com/api.php?amount=4&type=multiple`;
+
 document.onreadystatechange = () => {
   if (document.readyState === 'complete') {
-    const url = `https://opentdb.com/api.php?amount=4&type=multiple`;
     fetch(url).then(response => {
       response.json().then(data => {
-        enableStart();
         dataResponse = data.results;
-      });
-    });
-
-    startButton.addEventListener('click', handleStartButton);
-    nextQuestion.addEventListener('click', e => {
-      e.preventDefault();
-      handleNextQuestion();
-    });
-    answers.forEach(item => {
-      item.addEventListener('click', e => {
-        handleAnswer(dataResponse[index], e);
+        enableStart();
       });
     });
   }
@@ -79,14 +79,6 @@ function updateUI(dataResponse, index) {
   nextQuestion.setAttribute('disabled', true);
 }
 
-function handleMouseOver(e) {
-  e.target.style = 'background-color: darkgray';
-}
-
-function handleMouseOut(e) {
-  e.target.style = 'background-color: gray';
-}
-
 function handleAnswer(questionData, e) {
   nextQuestion.removeAttribute('disabled');
   const answerValue = e.target.textContent;
@@ -120,9 +112,9 @@ function handleFinish() {
     ? (finishStatusContainer.textContent = 'Passed!')
     : (finishStatusContainer.textContent = 'Failed!');
   const retakeQuiz = document.querySelector('[data-name="restart"]');
-  retakeQuiz.addEventListener('click', handleRetakeQuiz);
+  retakeQuiz.addEventListener('click', handleTakeAnotherQuiz);
 }
 
-function handleRetakeQuiz() {
+function handleTakeAnotherQuiz() {
   location.reload();
 }
