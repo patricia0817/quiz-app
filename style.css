@@ -34,9 +34,14 @@ body {
   opacity: 1;
 }
 
+[data-name='start-quiz']:disabled {
+  opacity: 0.2;
+}
+
 .container__questions {
   text-align: center;
   padding: 20rem;
+  display: none;
 }
 
 .container__questions__form {
@@ -77,6 +82,10 @@ body {
   padding: 0.7rem;
 }
 
+.container__questions__submit__form:disabled {
+  opacity: 0.2;
+}
+
 .container__questions__answer {
   margin: 0.5rem 0;
   padding: 0.5rem 0;
@@ -87,9 +96,19 @@ body {
   padding: 0.7rem 0.3rem;
   display: inline-block;
   width: 98%;
+  transition: all 0.3s ease;
+}
+
+.container__questions__answer label:hover {
+  background-color: darkgray;
+}
+
+.container__questions__answer input[type='radio']:checked + label {
+  background-color: black;
 }
 
 .container__finish {
+  display: none;
   text-align: center;
   padding: 20rem;
   width: 400px;
@@ -120,4 +139,18 @@ body {
 [data-name='quizStatus'] {
   color: #b94f2c;
   font-weight: bold;
+}
+
+[data-name='restart'] {
+  background-color: transparent;
+  border: 1px solid black;
+  transition: all 1s ease;
+  opacity: 0.5;
+  padding: 0.5rem;
+  margin-top: 2rem;
+}
+
+[data-name='restart']:hover {
+  opacity: 1;
+  padding: 0.7rem;
 }

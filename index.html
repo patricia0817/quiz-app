@@ -19,29 +19,29 @@
         <h2 class="container__start__description">
           Welcome, are you ready to take the quiz?
         </h2>
-        <input type="submit" value="Start" data-name="start-quiz" />
+        <button data-name="start-quiz" disabled>Start</button>
       </div>
       <div class="container__questions">
         <form action="submit" class="container__questions__form">
           <div class="container__questions__question" data-name="question">
-            <h3>What does CSS stands for?</h3>
+            <h3></h3>
           </div>
           <div class="container__questions__answers" data-name="answers">
             <div class="container__questions__answer" data-name="answer">
               <input type="radio" name="answer" id="answer1" />
-              <label for="answer1">Computer Style Sheets</label>
+              <label for="answer1"></label>
             </div>
             <div class="container__questions__answer" data-name="answer">
               <input type="radio" name="answer" id="answer2" />
-              <label for="answer2">Cascading Style Sheets</label>
+              <label for="answer2"></label>
             </div>
             <div class="container__questions__answer" data-name="answer">
               <input type="radio" name="answer" id="answer3" />
-              <label for="answer3">Colorful Style Sheets</label>
+              <label for="answer3"></label>
             </div>
             <div class="container__questions__answer" data-name="answer">
               <input type="radio" name="answer" id="answer4" />
-              <label for="answer4">Creative Style Sheets</label>
+              <label for="answer4"></label>
             </div>
             <input
               class="container__questions__submit__form"
@@ -54,14 +54,15 @@
       <div class="container__finish">
         <h3>Finished!</h3>
         <div class="elapsed__time__container">
-          It took you <span data-name="elapsedTime">22 min</span> to finish this
-          quiz
+          It took you <span data-name="elapsedTime">22</span> seconds to finish
+          this quiz
         </div>
         <div class="correct__answers__container">
           You answered correct to,
           <span data-name="correctAnswers">5</span> questions.
         </div>
         <div data-name="quizStatus">Passed!</div>
+        <button data-name="restart">Take another quiz</button>
       </div>
     </div>
     <script src="main.js"></script>
